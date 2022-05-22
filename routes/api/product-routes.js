@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
       'price',
       'stock',
       'category_id',
-      // [sequelize.literal('(SELECT * FROM product WHERE category_id = category.category_id)')]
     ],
     include: [
       {
@@ -24,7 +23,6 @@ router.get('/', (req, res) => {
         attributes: ['product-id']
       }
     ]
-     
   })
   .then(productData => res.json(productData))
   .catch(err => {
