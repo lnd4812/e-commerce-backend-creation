@@ -12,11 +12,11 @@ This program integrates MySQL with Express.js API configured with Sequelize to b
 
 Output is based on the acceptance criteria outlined in the Module 13 Assignment Overview [Module-13-assignment](https://courses.bootcampspot.com/courses/1181/assignments/23361?module_item_id=464776).
 
-[1st animation](https://courses.bootcampspot.com/courses/1181/files/1692643/preview).
+![1st animation](assets/13-orm-homework-demo-01.gif)
 
-[2nd animation](https://courses.bootcampspot.com/courses/1181/files/1692777/preview).
+![2nd animation](assets/13-orm-homework-demo-02.gif)
 
-[3rd animation](https://courses.bootcampspot.com/courses/1181/files/1692778/preview).
+![3rd animation](assets/13-orm-homework-demo-03.gif)
 
 ## Table of Contents
 
@@ -29,11 +29,10 @@ Output is based on the acceptance criteria outlined in the Module 13 Assignment 
 
 ## Installation
 
-* Run MySQL to create the ecommerce_db database via "source db/schema.sql", using the schema.sql file from the starter code.
-* Set sequelize.sync in the "server.js" file to "force: true" to create and seed the tables for the ecommerce_db database,
-* Enter "npm start" in the terminal to start the server,then type in "npm run seed" to see the tables from the starter code files.
-* Stop server to set sequelize.sync to "force: false" to avoid overwriting the now seeded tables.
-* Start the server again and test all of the API routes using Insomnia.
+* Run MySQL to create the ecommerce_db database via "source db/schema.sql", using the schema.sql file from the starter code;
+* Set sequelize.sync in the "server.js" file to "force: true" to create and seed the tables for the ecommerce_db database;
+* Enter "npm start" in the terminal to start the server,then type in "npm run seed" to see the tables from the starter code files;
+* Stop server to set sequelize.sync to "force: false" to avoid overwriting the now seeded tables;* Start the server again and test all of the API routes using Insomnia;
 
 ## Usage
 
@@ -65,7 +64,7 @@ My GitHub Username is github.com/lnd4812
 
 ## GitHub Repository
 
-My GitHub repository link for this project is [Github link](https://github.com/lnd4812/e-commerce-backend-creation)
+My GitHub repository link for this project is via this [Link](https://github.com/lnd4812/e-commerce-backend-creation)
 
 ## Application Video Link
 
