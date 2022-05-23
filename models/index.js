@@ -28,12 +28,22 @@ Tag.belongsToMany(Product, {
   foreignKey: 'tag_id'
 });
 
+// create the association between Product & Product Tag
 ProductTag.belongsTo(Product, {
   foreignKey: 'product_id'
 });
 
 Product.hasMany(ProductTag, {
   foreignKey: 'product_id'
+});
+
+// create the association between Tag & Product Tag
+ProductTag.belongsTo(Tag, {
+  foreignKey: 'tag_id'
+});
+
+Tag.hasMany(ProductTag, {
+  foreignKey: 'tag_id'
 });
 
 module.exports = {
