@@ -12,6 +12,8 @@ This program integrates MySQL with Express.js API configured with Sequelize to b
 
 Output is based on the acceptance criteria outlined in the Module 13 Assignment Overview [Module-13-assignment](https://courses.bootcampspot.com/courses/1181/assignments/23361?module_item_id=464776).
 
+Animations from the Challenge outline provide examples of expectations from testing via Insomnia.
+
 ![1st animation](assets/13-orm-homework-demo-01.gif)
 
 ![2nd animation](assets/13-orm-homework-demo-02.gif)

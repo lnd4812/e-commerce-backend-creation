@@ -44,17 +44,7 @@ router.get('/:id', (req, res) => {
       'stock',
       'category_id'
     ],
-    // include: [
-    //   {
-    //     model: Category,
-    //     attributes: ['id', 'category_name']
-    //   },
-    //   {
-    //     model: ProductTag,
-    //     attributes: ["product_id", "tag_id"]
-    //   }
-    // ]
-  })
+    })
     .then(productData => {
       if( !productData) {
         res.status(404).json({ message: "There is no product with that id. Please check your entry and try again."});
@@ -71,11 +61,12 @@ router.get('/:id', (req, res) => {
   
 // create new product
 router.post('/', (req, res) => {
-  // expects {product_name: "Basketball", price: 200.00, stock: 3, tagIds: [1, 2, 3, 4]}
+  // expects {product_name: "Basketball", price: 200.00, stock: 3, tagIds: [1, 2, 3, 4] - I've included a category id}
     Product.create({
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
+      category_id: req.body.category_id,
       tagIds: req.body.tagIds
     })
     .then((product) => {
@@ -83,6 +74,7 @@ router.post('/', (req, res) => {
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
+            product_name: product.product_name,
             product_id: product.id,
             tag_id,
           };
@@ -102,11 +94,10 @@ router.post('/', (req, res) => {
 // update product
 router.put('/:id', (req, res) => {
   // update product data
-  Product.update(    {
+  Product.update({
       product_name: req.body.product_name,
       price: req.body.price,
-      stock: req.body.stock,
-      category_id: req.body.category_id
+      stock: req.body.stock
     },
     {
     where: {
